@@ -1,0 +1,88 @@
+1) Create a template  Two var JSX expression
+h1  -----> your name
+p   -----> Age :26
+p   ------> Location : your Location
+Render templateTwo  instead of template
+
+Ans -> 
+
+var userInfo = {
+  userName: "Murari Kumar ",
+  userAge: 36,
+  location: "Madhubani"
+};
+var templateTwo = (
+  <div>
+    <h1>{userInfo.userName ? userInfo.userName : "Anonymous"}</h1>
+     
+  </div>
+);
+var elm = document.getElementById("app");
+ReactDOM.render(templateTwo, elm);
+
+
+
+============================================
+2.  create app object title/subtitle
+     - user title/subtitle in  the template
+     - render template
+
+    Ans ->
+    var app = {
+  title: "Indecision App",
+  subtitle: "Put your life in the hands of a computer",
+ 
+};
+
+var template = (
+  <div>
+    <h1>Title : {app.title}</h1>
+       
+  </div>
+);
+
+=============================================     
+3. only render the subtitle (and p tag) if subtitle exist -logical and 
+   operator 
+
+   - render new p tag - if options.length > 0  "Here are your options "
+         "No options"
+
+Ans ->  {app.subtitle && <p>SubTitle : {app.subtitle}</p>}
+        <p>{app.options.length > 0 ? "Here are your options" : "No Options Exist"}</p>
+========================================================================
+
+4. Challenge - Use arrow Function 
+               getFirstName('') --> MIke
+               create reqular arrow Function
+               create arrow function using shorthand syntax
+
+ ===========================================================================
+ 5. const multiplier ={
+   // number -array of number 
+   // multiplayBy -single number
+  // multiply - return a new array whrere the number hava been multiplied 
+ }  
+
+ ==================================================
+
+ 6. challage 
+    -> Make button  "-1"
+    -> setup minusOne function and register = -log "minusOne"
+    -> make reset  button 'reset' -setup reset function - log reset
+
+
+                
+=========================================================
+7)  Create render function that renders that new JSX
+    - call it right away
+    - call it after options array added to 
+
+
+ ==================================================================
+
+8) create "Remove All" button above list
+    on click --> wipe the array -> rerender
+
+
+
