@@ -11,19 +11,19 @@ import { addExpense } from "./actions/expenses";
 import { setTextFilter } from "./actions/filter";
 
 const store = configureStore();
-store.subscribe(() => {
-  const state = store.getState();
-  const visiableExpenses = getVisibleExpenses(state.expenses, state.filter);
-  //console.log("visiable expenses -> ", visiableExpenses);
-});
+// store.subscribe(() => {
+//   const state = store.getState();
+//   const visiableExpenses = getVisibleExpenses(state.expenses, state.filter);
+//   //console.log("visiable expenses -> ", visiableExpenses);
+// });
 
-store.dispatch(addExpense({ description: "Water", amount: 100 }));
+// store.dispatch(addExpense({ description: "Water", amount: 100 }));
 
-store.dispatch(addExpense({ description: "Gas", createdAT: 2000 }));
+// store.dispatch(addExpense({ description: "Gas", createdAT: 2000 }));
 
-store.dispatch(addExpense({ description: "rent", amount: 300 }));
+// store.dispatch(addExpense({ description: "rent", amount: 300 }));
 
-store.dispatch(addExpense({ description: "fruits", amount: 400 }));
+// store.dispatch(addExpense({ description: "fruits", amount: 400 }));
 
 //store.dispatch(setTextFilter("gas"));
 // setTimeout(() => {
